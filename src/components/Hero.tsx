@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-            <a href="https://app.kirvano.com/dashboard" className="btn-cta w-full sm:w-auto">
+            <a href="https://pay.cakto.com.br/drgosnv_1034015" className="btn-cta w-full sm:w-auto">
               <Download className="h-5 w-5" />
               Quero o Kit Agora
             </a>

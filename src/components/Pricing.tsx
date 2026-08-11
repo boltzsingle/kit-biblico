@@ -60,7 +60,7 @@ export default function Pricing() {
               </div>
 
               {/* CTA */}
-              <a href="https://app.kirvano.com/dashboard" className="btn-cta mt-10 w-full">
+              <a href="https://pay.cakto.com.br/drgosnv_1034015" className="btn-cta mt-10 w-full">
                 <Download className="h-6 w-6" />
                 Quero o Kit Bíblico Agora
               </a>
