@@ -6,7 +6,7 @@ export default function Pricing() {
 
   const features = [
     '12 livros digitais completos em PDF',
-    'Mais de 400 atividades para crianças de 3 a 10 anos',
+    'Mais de 400 atividades para crianças de 3 a 15 anos',
     'Histórias bíblicas ilustradas e adaptadas',
     'Atividades de colorir, jogos e quebra-cabeças',
     'Exercícios de alfabetização com temas bíblicos',
@@ -39,11 +39,11 @@ export default function Pricing() {
               {/* Price */}
               <div className="mt-8 flex flex-col items-center justify-center gap-2">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-xl text-slate-400 line-through">R$ 97,00</span>
+                  <span className="text-xl text-slate-400 line-through">R$ 57,90</span>
                   <span className="font-display text-5xl font-bold text-primary-600">R$ 9,90</span>
                 </div>
                 <span className="rounded-full bg-success-100 px-4 py-1 text-sm font-semibold text-success-700">
-                  Economia de 69%
+                  Economia de 83%
                 </span>
               </div>
 

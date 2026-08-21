@@ -25,7 +25,7 @@ export default function FAQ() {
     {
       question: 'Para qual idade o material é indicado?',
       answer:
-        'O Kit Bíblico Infantil foi desenvolvido para crianças de 3 a 10 anos, com atividades organizadas por níveis de dificuldade para atender diferentes faixas etárias.',
+        'O Kit Bíblico Infantil foi desenvolvido para crianças de 3 a 15 anos, com atividades organizadas por níveis de dificuldade para atender diferentes faixas etárias.',
     },
     {
       question: 'Existe garantia?',

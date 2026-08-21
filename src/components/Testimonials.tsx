@@ -9,22 +9,19 @@ export default function Testimonials() {
       name: 'Mariana Costa',
       role: 'Mãe da Helena, 6 anos',
       text: 'O kit transformou nossas noites em família. Minha filha adora as histórias e as atividades de colorir. Aprendeu sobre a Bíblia de um jeito que eu nunca conseguiria sozinha!',
-      avatar: 'MC',
-      color: 'bg-primary-500',
+      image: '/testimonials/mariana.jpg',
     },
     {
       name: 'Pastor João Batista',
       role: 'Igreja Batista Vida Nova',
       text: 'Uso o material na Escola Dominical e as crianças ficam encantadas. O conteúdo é bem elaborado, com atividades que prendem a atenção e ensinam de verdade.',
-      avatar: 'JB',
-      color: 'bg-accent-500',
+      image: "/testimonials/joao.jpg",
     },
     {
       name: 'Fernanda Lima',
       role: 'Professora de educação infantil',
       text: 'Como professora, recomendo demais! As atividades de alfabetização com temas bíblicos são perfeitas. As crianças aprendem a ler e a escrever enquanto conhecem a Palavra.',
-      avatar: 'FL',
-      color: 'bg-success-500',
+      image: "/testimonials/fernanda.jpg",
     },
   ];
 
@@ -58,9 +55,11 @@ export default function Testimonials() {
                 "{t.text}"
               </p>
               <div className="mt-6 flex items-center gap-3">
-                <div className={`flex h-12 w-12 items-center justify-center rounded-full ${t.color} font-display text-sm font-bold text-white`}>
-                  {t.avatar}
-                </div>
+                <img               
+                 src={t.image}
+                alt={t.name}
+                className="h-12 w-12 rounded-full object-cover ring-2 ring-white shadow-sm"
+                />
                 <div>
                   <p className="font-semibold text-slate-800">{t.name}</p>
                   <p className="text-xs text-slate-400">{t.role}</p>

@@ -24,7 +24,7 @@ export default function Showcase() {
             12 livros com mais de 400 atividades
           </h2>
           <p className="mt-4 text-lg text-slate-500">
-            Um material completo e diversificado para crianças de 3 a 10 anos, organizado por temas e níveis de dificuldade.
+            Um material completo e diversificado para crianças de 3 a 15 anos, organizado por temas e níveis de dificuldade.
           </p>
         </div>
 
