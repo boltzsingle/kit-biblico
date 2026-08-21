@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const images = [
   "/carousel/atividade-1.png",
@@ -12,22 +12,40 @@ const images = [
 
 export default function ProductCarousel() {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const pauseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000);
+   useEffect(() => {
+  if (paused) return;
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextSlide = () => {
+  const interval = setInterval(() => {
     setCurrent((prev) => (prev + 1) % images.length);
-  };
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [paused]);
+
+const pauseAutoplay = () => {
+  setPaused(true);
+
+  if (pauseTimeout.current) {
+    clearTimeout(pauseTimeout.current);
+  }
+
+  pauseTimeout.current = setTimeout(() => {
+    setPaused(false);
+  }, 6000);
+};
+
+   const nextSlide = () => {
+  pauseAutoplay();
+  setCurrent((prev) => (prev + 1) % images.length);
+};
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  };
+  pauseAutoplay();
+  setCurrent((prev) => (prev - 1 + images.length) % images.length);
+};
 
   return (
         <section className="bg-white px-4 pt-6 pb-0">
@@ -76,7 +94,10 @@ export default function ProductCarousel() {
             <button
               type="button"
               key={index}
-              onClick={() => setCurrent(index)}
+              onClick={() => {
+              pauseAutoplay();
+              setCurrent(index);
+              }}
               aria-label={`Ir para imagem ${index + 1}`}
               className={`h-2.5 w-2.5 rounded-full transition-all ${
                 current === index ? "scale-110 bg-orange-500" : "bg-slate-300"
